@@ -1,6 +1,6 @@
-#Nikush Dalia's Portfolio
-##React Hooks 2019 Remake
-##Online Terminal Version
+# Nikush Dalia's Portfolio
+## React Hooks 2019 Remake
+## Online Terminal Version
 
 Created with *React Hooks*, *use-global-hook* for state management.
 
