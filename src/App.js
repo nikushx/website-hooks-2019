@@ -1,39 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import useGlobalHookCreator from 'use-global-hook';
-import './App.css';
+import React from "react";
 
-const initialGlobalState = {
-  testCounter: 0
-}
 
-const globalActions = {
-  addToTestCounter: (store, testParam) => {
-    store.setState({
-      testCounter: store.state.testCounter + 1
-    })
-  }
-}
+// components
+import { ConsoleOutput } from "./components/ConsoleOutput";
+import { ConsoleInput } from "./components/ConsoleInput";
 
-const useGlobal = useGlobalHookCreator(React, initialGlobalState, globalActions);
+import "./App.scss";
+import useGlobal from "./store";
 
 function App() {
+	const [globalStore, globalActions] = useGlobal();
+	// const addToCounter = () => globalActions.addToTestCounter(2);
 
-  const [globalStore, globalActions] = useGlobal();
-
-  const addToCounter = () => globalActions.addToTestCounter();
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Counter: {globalStore.testCounter}
-        </p>
-        <button onClick={addToCounter}>Add to Counter</button>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<div className="corner-ribbon">Built w/ Hooks</div>
+			<ConsoleOutput/>
+			<ConsoleInput/>
+			{/* <header className="App-header">
+				<span>Counter: {globalStore.testCounter}</span>
+				<button onClick={addToCounter}>Add to Counter +2</button>
+			</header> */}
+		</div>
+	);
 }
 
 export default App;

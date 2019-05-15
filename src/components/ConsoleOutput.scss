@@ -1,0 +1,29 @@
+// top-level wrapper for console output
+.ConsoleOutput {
+	height: 100%;
+	padding: 10px;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 12px;
+
+	.output-item {
+		display: table;
+		margin-bottom: 10px;
+
+		&.bigger {
+			border: 1px solid;
+			border-spacing: 10px;
+			font-size: 14px;
+			font-weight: 'bold';
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	a.output-item {
+		&:hover {
+			color: white !important;
+		}
+	}
+}

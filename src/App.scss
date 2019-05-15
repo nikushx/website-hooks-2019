@@ -1,0 +1,26 @@
+// global font import
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.App {
+  background-color: #060607;
+  max-height: 100vh;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+
+  .corner-ribbon {
+    width: 200px;
+    background: rgb(16, 102, 160);
+    position: fixed;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #f0f0f0;
+    top: 25px;
+    right: -50px;
+    left: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}

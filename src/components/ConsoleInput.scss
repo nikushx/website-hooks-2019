@@ -1,0 +1,17 @@
+// top-level wrapper for console input
+.ConsoleInput {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 40px;
+
+	.console-input {
+		background-color: #3700B3;
+		width: 100%;
+		height: 100%;
+		padding: 0 10px;
+		color: #fff;
+		font-family: 'Source Code Pro', monospace;
+		border: none;
+	}
+}
