@@ -6,7 +6,7 @@
   max-height: 100vh;
   height: 100vh;
   color: white;
-  overflow: hidden;
+  overflow: scroll;
 
   .corner-ribbon {
     width: 200px;
@@ -21,6 +21,10 @@
     right: -50px;
     left: auto;
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	
+	@media (max-width: 768px) {
+		display: none;
+	}
   }
 }

@@ -1,0 +1,23 @@
+.output-item {
+	&.colorblock {
+		border: 1px solid;
+		padding: 10px;
+
+		&.helpcommand {
+			color: #ff8c00;
+
+			.command {
+				display: inline-block;
+				color: #ffd49f;
+			}
+
+			.seperator {
+				padding: 0 10px;
+			}
+
+			@media (max-width: 768px) {
+				font-size: 10px;
+			}
+		}
+	}
+}

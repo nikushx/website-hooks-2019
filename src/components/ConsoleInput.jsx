@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 import './ConsoleInput.scss';
-import useGlobal from '../store';
+import useGlobal from '../factory';
 
 export const ConsoleInput = () => {
-	const [a, b] = useGlobal();
+	const [, globalActions] = useGlobal();
 
 	const inputRef = useRef(null);
 	const [currentInput, setCurrentInput] = useState('');
@@ -16,6 +16,7 @@ export const ConsoleInput = () => {
 	const submitCommand = (e) => {
 		if (e.key === 'Enter') {
 			setCurrentInput('');
+			globalActions.submitCommand(currentInput);
 		}
 	}
 

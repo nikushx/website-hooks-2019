@@ -2,18 +2,16 @@
 .ConsoleOutput {
 	height: 100%;
 	padding: 10px;
+	padding-bottom: 50px;
 	font-family: 'Source Code Pro', monospace;
 	font-size: 12px;
 
 	.output-item {
 		display: table;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 
-		&.bigger {
-			border: 1px solid;
-			border-spacing: 10px;
-			font-size: 14px;
-			font-weight: 'bold';
+		&:first-child {
+			margin-bottom: 10px;
 		}
 
 		&:last-child {
