@@ -7,8 +7,8 @@ Created with *React Hooks*, *use-global-hook* for state management.
 ### Features
 
 - [x] Started project... finally.
-- [ ] SCSS support
-- [ ] Re-create basic CMD line
+- [x] SCSS support
+- [x] Re-create basic CMD line
 - [ ] Fully re-created with all menu items
 - [ ] Re-created easter eggs
 - [ ] Extend first easter egg
