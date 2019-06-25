@@ -5,6 +5,7 @@
 
 		&.helpcommand {
 			color: #ff8c00;
+			cursor: pointer;
 
 			.command {
 				display: inline-block;
@@ -15,8 +16,8 @@
 				padding: 0 10px;
 			}
 
-			@media (max-width: 768px) {
-				font-size: 10px;
+			@media only screen and (max-width: 768px) {
+				font-size: 12px;
 			}
 		}
 	}

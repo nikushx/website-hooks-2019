@@ -19,10 +19,10 @@
 
 				&.rotate {
 					animation: image-rotate infinite 40s linear;
-					padding-left: 15px;
+					padding: 5px;
 				}
 
-				@media (max-width: 768px) {
+				@media only screen and (max-width: 768px) {
 					width: 75px;
 					height: 75px;
 				}
@@ -36,13 +36,13 @@
 				margin: 0;
 				padding-bottom: 10px;
 
-				@media (max-width: 768px) {
+				@media only screen and (max-width: 768px) {
 					padding-bottom: 5px;
 				}
 			}
 
 			.text {
-				@media (max-width: 768px) {
+				@media only screen and (max-width: 768px) {
 					font-size: 10px;
 				}
 			}

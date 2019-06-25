@@ -5,6 +5,19 @@
 	bottom: 0;
 	height: 40px;
 
+	.mobile-button {
+		padding: 20px 40px;
+		position: fixed;
+		bottom: 10px;
+		text-align: center;
+		width: 100%;
+		display: none;
+
+		@media only screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+
 	.console-input {
 		background-color: #3700B3;
 		width: 100%;
@@ -13,5 +26,9 @@
 		color: #fff;
 		font-family: 'Source Code Pro', monospace;
 		border: none;
+
+		@media only screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 }

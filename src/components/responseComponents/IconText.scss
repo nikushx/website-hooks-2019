@@ -1,0 +1,46 @@
+.icontext-wrapper {
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	background: #056ec0;
+	padding: 0.5em 1em;
+	cursor: pointer;
+
+	&.color-secondary {
+		background: yellow;
+		color: black;
+	}
+	&.full {
+		width: 100%;
+	}
+
+	.text {
+		&.desktop {
+			display: inline-block;
+
+			@media only screen and (max-width: 768px) {
+				display: none;
+			}
+		}
+
+		&.mobile {
+			display: none;
+
+			@media only screen and (max-width: 768px) {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.small {
+		font-size: 14px;
+	}
+
+	&:hover {
+		background: #0887ea;
+	}
+
+	svg {
+		margin-right: 10px;
+	}
+}

@@ -1,15 +1,58 @@
 // global font import
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
+@keyframes hook {
+	0% {
+		right: -162px;
+    	top: -176PX;
+	}
+	56% {
+		right: -162px;
+    	top: -176PX;
+	}
+	67% {
+		right: -22px;
+		top: -27px;
+	}
+	92% {
+		right: -162px;
+    	top: -176PX;
+	}
+}
+
+@keyframes ribbon {
+	0% {
+		top: 35px;
+		right: -90px;
+	}
+	80% {
+		top: 35px;
+		right: -90px;
+	}
+	100% {
+		top: -55px;
+		right: -180px;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+}
+
+
 .App {
   background-color: #060607;
-  max-height: 100vh;
   height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   color: white;
-  overflow: scroll;
 
   .corner-ribbon {
-    width: 200px;
+    width: 300px;
     background: rgb(16, 102, 160);
     position: fixed;
     text-align: center;
@@ -17,14 +60,38 @@
     letter-spacing: 1px;
     font-size: 14px;
     color: #f0f0f0;
-    top: 25px;
-    right: -50px;
+    top: -55px;
+	right: -180px;
     left: auto;
     transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
+
+	animation-name: ribbon;
+	animation-duration: 6s;
+	animation-iteration-count: initial;
+	animation-timing-function: linear;
 	
-	@media (max-width: 768px) {
+	@media only screen and (max-width: 768px) {
 		display: none;
 	}
+  }
+
+  .hook-img {
+
+	  @media only screen and (max-width: 768px) {
+		  display: none;
+	  }
+
+	  img {
+		width: 166px;
+		right: -162px;
+    	top: -176PX;
+		position: fixed;
+		
+		animation-name: hook;
+		animation-duration: 7s;
+		animation-iteration-count: initial;
+		animation-timing-function: linear;
+	  }
   }
 }

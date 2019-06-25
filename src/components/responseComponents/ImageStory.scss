@@ -1,0 +1,38 @@
+.imagestory-container {
+	display: flex;
+	align-items: center;
+
+	font-family: 'Roboto', sans-serif;
+	word-wrap: break-word;
+
+	@media only screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+
+	.image-container {
+		img {
+			width: 200px;
+			height: 200px;
+
+			@media only screen and (max-width: 768px) {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+
+	.text {
+		padding: 0 20px;
+		color: #e8e8e8;
+		letter-spacing: 0.08rem;
+
+		@media only screen and (max-width: 768px) {
+			padding: 10px;
+		}
+
+		.heading {
+			font-size: 1.125rem;
+			padding-bottom: 10px;
+		}
+	}
+}

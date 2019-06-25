@@ -1,0 +1,153 @@
+@keyframes pulse {
+	0% {
+		transform: scale(1.0);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1.0);
+	}
+}
+
+.jobs-container {
+	
+	@media only screen and (min-width: 769px) {
+		flex-wrap: wrap;
+		display: flex;
+	}
+
+	.text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.position, .date, .location {
+		color: darkgray;
+	}
+	
+
+	.job-history-toggle {
+		cursor: pointer;
+		color: lightgray;
+		padding: 4px;
+		border: 1px solid;
+		border-color: lightgray;
+
+		&:hover {
+			color: white;
+			text-decoration: underline;
+			border-color: white;
+		}
+	}
+
+	.jobs-list {
+		margin-bottom: 20px;
+
+		.job-wrapper {
+			display: flex;
+			padding: 20px 0;
+	
+			&:first-child {
+				padding-top: 0;
+			}
+	
+			&:last-child {
+				padding-bottom: 0;
+			}
+	
+			.open-toggle {
+				flex: 1;
+	
+				display: flex;
+				justify-content: center;
+				align-items: center;
+	
+				font-size: 2.5rem;
+	
+				svg {
+					transition: all .4s;
+					animation-name: pulse;
+					animation-duration: 1s;
+					animation-iteration-count: infinite;
+					cursor: pointer;
+					
+					&.open {
+						animation: none;
+						transform: rotate(90deg);
+					}
+				}
+			}
+	
+			.job {
+				flex: 26;
+				display: flex;
+				width: 100%;
+				align-items: center;
+				padding-left: 10px;
+	
+				@media only screen and (max-width: 768px) {
+					flex: 10;
+				}
+				
+				.image-container {
+					display: inline-block;
+					flex: 2;
+					margin-right: 20px;
+					
+					@media only screen and (max-width: 768px) {
+						flex: 4;
+					}
+					
+					img {
+						width: 100%;
+					}
+				}
+
+				&.expand {
+					.image-container {
+						@media only screen and (max-width: 768px) {
+							display: none;
+						}
+					}
+
+					.text {
+						.small-logo-container {
+							@media only screen and (max-width: 768px) {
+								display: block;
+							}
+						}
+					}
+				}
+		
+				.text {
+					flex: 12;
+
+					.small-logo-container {
+						display: none;
+						margin-bottom: 5px;
+
+						img {
+							width: 100px;
+						}
+					}
+	
+					.description {
+						font-family: 'Roboto', sans-serif;
+						line-height: 26px;
+	
+						color: #58c775;
+					}
+	
+					span {
+						padding-bottom: 5px;
+	
+						&:last-child {
+							padding-bottom: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

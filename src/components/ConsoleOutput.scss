@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 // top-level wrapper for console output
 .ConsoleOutput {
-	height: 100%;
 	padding: 10px;
-	padding-bottom: 50px;
+	padding-bottom: 60px;
 	font-family: 'Source Code Pro', monospace;
-	font-size: 12px;
+	font-size: 14px;
+	background-color: #060607;
+
+	@media only screen and (max-width: 768px) {
+		padding-bottom: 80px;
+	}
 
 	.output-item {
 		display: table;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 
 		&:first-child {
 			margin-bottom: 10px;
